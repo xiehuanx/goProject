@@ -6,6 +6,7 @@ type Person struct {
 	age  int
 }
 
+
 func (p *Person) String() string {
 	p.age = 10
 	panic(p)

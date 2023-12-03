@@ -2,25 +2,25 @@ package main
 
 import (
 	"fmt"
-	"interfaceVsExtend"
-	"utils"
+	//"interfaceVsExtend"
+	//"utils"
 )
 
 type mtint int
 
-func init()  {
-	utils.CreateData()
-	fmt.Println("init 函数最先执行")
-}
-
-func inter()  {
-	wukong := interfaceVsExtend.LittleMonkey{
-		Monkey: interfaceVsExtend.Monkey{
-			Name : "小猴子",
-		},
-	}
-	wukong.Pashu()
-}
+//func init()  {
+//	utils.CreateData()
+//	fmt.Println("init 函数最先执行")
+//}
+//
+//func inter()  {
+//	wukong := interfaceVsExtend.LittleMonkey{
+//		Monkey: interfaceVsExtend.Monkey{
+//			Name : "小猴子",
+//		},
+//	}
+//	wukong.Pashu()
+//}
 
 
 
@@ -33,7 +33,11 @@ func main() {
 	//xiehuan := entity.NewUser("xiehuan", 12, "测试")
 	//fmt.Println(xiehuan)
 
-	inter()
+	//inter()
+
+	main2()
+
+	func
 }
 
 func main2()  {
@@ -61,7 +65,9 @@ func funcTest(function func(int, int) (int, int, int), n1 int, n2 int) (int, int
 func addSuper() func(int) int  {
 	var n = 10
 	return func(n2 int) int {
-		return n + n2
+		// return n + n2
+		n += n2
+		return n
 	}
 }
 

@@ -18,7 +18,7 @@ func main() {
 	var result str_order
 	var results []str_order
 
-	dsn := "root:Xiehuan!3@tcp(sh-cdb-4tu4mj0t.sql.tencentcdb.com:63257)/cp?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:Xiehuan@3@tcp(sh-cdb-4tu4mj0t.sql.tencentcdb.com:63257)/cp?charset=utf8mb4&parseTime=True&loc=Local"
 	db,errDb:=gorm.Open(mysql.Open(dsn), &gorm.Config{
 		NamingStrategy: schema.NamingStrategy{
 			SingularTable: true,
@@ -55,4 +55,6 @@ func main() {
 	}
 	db.Where(order).Find(&results)
 	fmt.Println("results的长度是：", len(results))
+
+
 }
